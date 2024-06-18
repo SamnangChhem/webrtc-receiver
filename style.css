@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+body {
+  font-family: 'Syne Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 80px 10px;
+}
+
+#webcamButton {
+  background-color: #3C4043;
+  /* Button color */
+  border-radius: 20px;
+  /* Rounded corners */
+  color: white;
+  /* Icon color */
+  padding: 10px 20px;
+  /* Some padding */
+  font-size: 16px;
+  /* Font size */
+  border: none;
+  /* No border */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}
+
+/* Add the camera slash icon using Font Awesome for the inactive state */
+#webcamButton::before {
+  content: '\f070';
+  /* This is the unicode for the camera slash icon in Font Awesome */
+  font-family: 'Font Awesome 5 Free';
+  /* Specify the font family */
+}
+
+/* Add this additional class for the active state with a camera icon */
+#webcamButton.active::before {
+  content: '\f030';
+  /* This is the unicode for the camera icon in Font Awesome */
+}
+
+
+
+video {
+  width: 40vw;
+  height: 30vw;
+  margin: 2rem;
+  background: #2c3e50;
+}
+
+.videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
